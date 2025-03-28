@@ -1,0 +1,574 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Blinker:wght@100;200;300;400;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+@keyframes intrance {
+  0% {transform: translateX(-500px);}
+  100% {transform: translateX(0px);}
+}
+
+@keyframes leave {
+  0% {transform: translateX(0px);}
+  100% {transform: translateX(100%);}
+}
+
+html {
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+}
+
+.main-box {
+    display: inline;
+    flex-direction: column;
+    flex-grow: 1;
+    margin: auto;
+    max-width: 60rem;
+    place-content: center;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    position: relative;
+
+
+}
+
+
+
+.welcome {
+  background-color: #060225;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0;
+  overflow: hidden;
+  position: fixed;
+  font-family: 'Montserrat', sans-serif;
+  color: white;
+  align-items: start;
+
+  
+
+}
+
+.welcome h2  {
+  animation: 1s alternate intrance;
+}
+.welcome h3  {
+  animation: 1s alternate intrance;
+}
+.welcome button  {
+  animation: 1s alternate intrance;
+  background-color: #060225;
+  color: #FFFFFF;
+  border-style: solid;
+  border-color: #FFFFFF;
+  border-radius: 5px;
+  padding: 5px;
+  transition: .5s;
+  
+}
+
+.welcome button:hover {
+  transform: translateY(3px);
+}
+h3 {
+  font-weight: 200;
+}
+
+
+
+.credit-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+}
+
+.credit-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 100px;
+  padding-bottom: 2.3rem;
+  text-align: center;
+  flex: 1 1 18%; /* Each item takes up 18% of the row */
+  max-width: 200px; /* Optional: Sets a maximum width for each item */
+}
+
+.credit-item img {
+  width: 100px;
+  height: 100px;
+  border-radius: 20%;
+  justify-content: center;
+  transition: transform .35s ease;
+
+  height: auto;
+  border-radius: 10px; /* Optional: Adds rounded corners to images */
+}
+
+
+.credit-item a:hover img{
+  transform: scale(1.1);
+}
+.credit-item p {
+  margin: 10px 0;
+  font-size: 27px;
+  text-align: center;
+  color: #FFFFFF;
+  font-family: 'Montserrat', sans-serif;
+  justify-content: center;
+}
+.credit-container {
+  display: flex;
+  flex-wrap: wrap; /* Allows wrapping if items don't fit in one row */
+  justify-content: space-around; /* Spreads items evenly with space between */
+  gap: 20px; /* Adds space between items */
+}
+
+
+body {    
+    background-image: url(../images/bg2.jpg);
+    background-color: #272727;
+    margin: 0;   
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+}
+
+h1 {
+  font-size: 2rem;
+  line-height: 0;
+  font-family: 'Montserrat', sans-serif;
+  color: white;
+  padding-top: 30px;
+  text-align: center;
+  transition: transform 1s ease-in-out;
+  
+}
+h1:hover {
+  transform: scale(1.1);
+}
+
+.h1p {
+  font-size: 12rem;
+}
+
+
+p {
+color: white;
+font-family: 'Montserrat', sans-serif;
+font-size: 1.5rem;
+text-align: center;
+}
+
+h6 {
+    font-size: 3rem;
+    line-height: 0;
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+    text-shadow: 7px 7px 7px black;
+}
+.topnav {
+  color: #FFFFFF;
+  background: rgba(255, 255, 255, 0.1); /* Semi-transparent white */
+  backdrop-filter: blur(10px); /* Blurred glass effect */
+  -webkit-backdrop-filter: blur(10px); /* Safari support */
+  overflow: hidden;
+  margin: -50px;
+  border-radius: 15px;
+  height: 60px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Soft shadow */
+
+  
+
+  
+
+
+}
+
+.nav-tab {
+
+  float: right;
+  color: #FFFFFF;
+  text-align: center;
+  margin-top: 15px;
+  margin-right: 20px;
+  text-decoration: none;
+  font-size: 1.5rem;
+  font-family: 'Montserrat', sans-serif;
+  transition: 0.3s ease-in-out;
+
+  
+}
+
+  .nav-tab:hover {
+   transform: translateY(-0.3em);
+
+  }
+
+  #searchInput {
+    background-color: #1f1188;
+    padding: 10px;
+    width: 56%;
+    color: #FFFFFF;
+    border-color: #1f1188;
+    border-style: solid;
+    border-radius: 10px;
+    transition: all 0.3s ease-in-out;
+    outline: none;
+  }
+
+  #searchContainer {
+    display: flex;
+    justify-content: center;
+  }
+  #searchInput::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+}
+#searchInput:focus {
+  background-color: #1f1188;
+  border-color: #ffffff;
+  box-shadow: 0 0 15px rgba(251, 251, 249, 0.7);
+}
+  #nav-text {
+    float: right;
+    color: #FFFFFF;
+    text-align: center;
+    padding: 35px;
+    margin-bottom: -20px;
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-family: 'Montserrat', sans-serif;
+  }
+
+
+
+
+ .right-padding-nav {
+    padding-right: 25px;
+  }
+  
+ .left-padding-nav {
+    padding-left: 5rem;
+  }
+  
+ .topnav a:hover {
+    color: rgb(255, 255, 255);
+  }
+
+ .topnav a.active {
+    color: white;
+   
+  }
+
+ .nav-image {
+    height: 30px; /* Set the height of the image */
+    width: 30px; /* Set the width of the image */
+    transition: transform .1s ease-in-out; /* Add a transition effect on hover */
+    vertical-align: bottom; /* Aligns with the text on the navbar */
+    margin-right: 5px; /* Margin so text doesnt overlap with the icon*/
+  }
+
+  .nav-image:hover,
+  .nav-image:focus {
+    box-shadow: 0 0.5em 0.5em -0.4em var(--hover);
+  }
+  
+  .main-holder {
+  background-image: url(../images/index.jpg);
+  background-repeat: repeat-x;
+  background-position: center;
+  background-size: cover;
+}
+
+a {
+  
+  color: #adadad;
+  text-align: center;
+  text-decoration: none;
+  font-family: 'Montserrat', sans-serif;
+  transition: color .3s ease-in-out;
+}
+
+
+.main {
+    display: flex;
+    height: 100%;
+    width: 100%;
+}
+.header {
+  padding: 60px;
+
+}
+
+#nav-logo {
+  margin-top: 7px;
+  margin-left: 10px;
+  width: 50px;
+  transition: transform 0.3s ease-in-out;
+}
+#nav-logo:hover{
+transform: scale(1.2);
+}
+
+
+.footer-logo-holder 
+{
+  overflow: hidden;
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+}
+.footer-logo {
+  padding-top: 2rem;
+  width: 3.7rem;
+  height: 3.7rem;
+}
+.footer-nav-holder {
+  height: fit-content;
+  width: 100%;
+  background-color: #272727;
+  display: flex;
+  flex-direction: row;
+  place-content: center;
+  flex-wrap: wrap;
+  background-size: cover;
+}
+
+.footer-tab {
+  background-color: transparent;
+  border: 2px solid #272727;
+  color: #ffffff;
+  text-align: center;
+  padding: 15px 50px;
+  text-decoration: none;
+  font-size: 1.5rem;
+  display: inline-block;
+  font-family: 'Montserrat', sans-serif;
+  transition: transform 0.3s ease-in-out, color 0.4s ease-in-out; /* Added transform transition */
+  margin: 4px 2px;
+  cursor: pointer;
+  border-color: white;
+  border-radius: 7px;
+  margin-right:25px;
+}
+.footer-tab:hover {
+  background-color: white;
+  color: black;
+  transform: scale(1.1); /* Zoom effect */
+}
+
+.footer-media-holder {
+  height: fit-content;
+  width: 100%;
+  background-color: #272727;
+  display: flex;
+  flex-direction: row;
+  place-content: center;
+  flex-wrap: wrap;
+  background-size: cover;
+}
+
+.game {
+  background-color: #1f1188;
+  border-radius: 10px;
+  display: inline-block;
+  height: 180px;
+  width: 150px;
+  margin: 10px;
+  transition: .5s;
+
+}
+
+.game:hover {
+  transform: scale(1.05);
+
+}
+
+
+.game a {
+  font-size: 60%;
+  
+}
+
+.games {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 0 auto;
+  max-width: 1200px;
+
+}
+
+#searchResults {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 0 auto;
+  max-width: 1200px;
+
+}
+
+.game img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: -10px;
+  min-width: 100%;
+  object-fit: cover;
+  height: 150px;
+
+}
+
+.footer-media {
+  width: 4rem;
+  height: 4rem;
+}
+
+.stats-logo {
+  font-size: 2rem;
+  line-height: 0;
+  color: #ffffff;
+  padding-bottom: 3rem;
+}
+
+.stats-holder {
+  overflow: hidden;
+  padding-bottom: 5rem;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10%;
+  margin-top: -150px;
+}
+
+.stats-box img {
+    width: 40px; 
+    height: 100%;
+    object-fit: contain;
+    margin-bottom: -10px;
+ 
+
+}
+
+.stats-title {
+  font-size: 1rem;
+  line-height: 1;
+  padding-bottom: 1.5rem;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  color: #ffffff;
+  align-items: center;
+}
+
+
+.stats-desc {
+  font-size: 70%;
+  line-height: 1;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  color: #ffffff;
+  margin-top: -20px;
+}
+.stats {
+  display: block;
+  padding-top: 10rem;
+  padding-bottom: 10rem;
+  
+}
+.stats-icon {
+  width: 50px; 
+  height: 50px;  
+  padding-bottom: 2.5rem;
+  padding-left: 1.7rem;
+}
+
+.stats-icon img {
+  width: 40px; 
+  height: 100%;
+  object-fit: contain;
+  margin-bottom: -10px;
+  transition: transform 0.5s ease-in-out;
+}
+
+.stats-box:hover img {
+  transform: scale(1.2);
+}
+
+.stats-box {
+  text-align: center;
+}
+
+.dot {
+  box-shadow: 0 0 150px 100px #00bbff;
+border-radius: 50%;
+height: 320px;
+width: 320px;
+background-image: radial-gradient(
+  farthest-corner at 50% 50%,
+  #ffffff, #009dff
+);
+background-blend-mode: multiply;
+filter: blur(50px) contrast(1.1);
+position: fixed;
+transform: translate(-50%, -50%);
+left: 50vw;
+top: 100vh;
+position: absolute;
+  z-index: -100;
+}
+#proxyFrame {
+  border: none;
+    text-align: center;
+    justify-content: center;
+  }
+  #uv-address {
+    background-color: transparent;
+    border: 1.5px #ffffff solid;
+    border-radius: 15px;
+    padding: 12px;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    background-color: white;
+    outline: none;
+    transition: hover .2s;
+    width: 500px;
+    padding-left: 40px;
+    margin-top: 40px;
+  }
+  @font-face {
+    font-family: Prompt;
+    src: url(/fonts/prompt.ttf);
+  }
+  @font-face {
+    font-family: Fredoka;
+    src: url(/fonts/fredoka.ttf);
+  }
+  #categorySelect {
+    padding: 10px;
+    border-radius: 10px;
+    border: 2px solid #1f1188;
+    background-color: #1f1188;
+    color: #ffffff;
+    cursor: pointer;
+  }
+
+  .partners-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .middle-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
